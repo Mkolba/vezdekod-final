@@ -1,5 +1,9 @@
 [<img width="134" src="https://vk.com/images/apps/mini_apps/vk_mini_apps_logo.svg">](https://vk.com/services)
 
+# Список доступных доменов для распознавания
+Можно изменить в `/src/tabs/Scan.js`  
+По умолчанию = ["vk.com"]
+
 # Create VK Mini App [![npm][npm]][npm-url] [![deps][deps]][deps-url]
 
 ## How to use
