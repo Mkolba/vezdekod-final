@@ -23,6 +23,7 @@ class WSHandler(web.View):
         app = self.request.app
 
         socket = Socket(sock, self.request.data['auth']['subset']['vk_user_id'])
+        is_manager_connected = True if app.manager else False
 
         try:
             if self.request.data.role == 'manager':
@@ -34,7 +35,6 @@ class WSHandler(web.View):
                     await sock.close(message=b'taken')
             else:
                 app.sockets.update({socket.id: socket})
-                is_manager_connected = True if app.manager else False
                 await socket.send('connected', hasManager=is_manager_connected, playing=app.playing)
 
                 if app.manager:
@@ -56,7 +56,7 @@ class WSHandler(web.View):
         finally:
             if socket.id in app.sockets:
                 app.sockets.pop(socket.id)
-            if self.request.data.role == 'manager':
+            if self.request.data.role == 'manager' and not is_manager_connected:
                 await self.broadcast('manager_disconnected')
                 app.manager = None
             else:
