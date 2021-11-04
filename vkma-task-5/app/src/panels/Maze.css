@@ -1,0 +1,43 @@
+.ball {
+    width: 26px;
+    height: 26px;
+    background: steelblue;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Maze {
+    border: 2px solid var(--text_primary);
+    table-layout: fixed;
+    max-width: calc(48*7px);
+
+}
+
+.item {
+    width: 48px;
+    height: 48px;
+}
+
+.item-barrier {
+    background: var(--text_primary);
+}
+
+.item-endpoint {
+    background: lightgreen;
+}
+
+td {
+    width: 48px;
+}
+
+.Wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
