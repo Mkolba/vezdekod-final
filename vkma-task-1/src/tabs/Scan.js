@@ -72,7 +72,9 @@ export default class Scan extends React.Component {
 				<Panel id={'history'}>
 					<PanelHeader>QR Сканер</PanelHeader>
 						<Placeholder icon={<Icon28QrCodeOutline width={128} height={128} fill={'var(--button_primary_background)'}/>}
-									 action={<Button size="m" onClick={this.scanQR}>Сканировать QR код</Button>} stretched />
+									 action={<Button size="m" onClick={this.scanQR}>Сканировать QR код</Button>} stretched>
+							По-умолчанию ссылки распознаются только на домене vk.com
+						</Placeholder>
 				</Panel>
 			</View>
 		)
