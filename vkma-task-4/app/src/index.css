@@ -1,0 +1,40 @@
+.Buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Buttons .Button {
+    padding: 0 2px;
+    height: 60px;
+}
+
+.Content {
+    text-align: center;
+}
+
+.CustomButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Indicator {
+    margin-top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.Indicator-disabled {
+    background: firebrick;
+}
+
+.Indicator-enabled {
+    background: red;
+}
+
+.RoleSelector .Button:first-child {
+    margin-bottom: 12px;
+}
