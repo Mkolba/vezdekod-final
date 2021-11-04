@@ -1,7 +1,6 @@
 import React from 'react';
 import {View, Panel, Cell, PanelHeader, Placeholder, Group, Header, Alert, Link} from '@vkontakte/vkui';
-import { Icon28ScanViewfinderOutline } from '@vkontakte/icons';
-import { Icon24Note, Icon24Linked } from '@vkontakte/icons';
+import { Icon28ScanViewfinderOutline, Icon24Note, Icon24Linked } from '@vkontakte/icons';
 
 
 export default class History extends React.Component {
@@ -16,6 +15,10 @@ export default class History extends React.Component {
 		this.setState({popout:
 				<Alert header={'Результат сканирования'} onClose={() => this.setState({popout: null})}
 					   actions={[{
+						   title: 'Поделиться',
+						   autoclose: true,
+						   action: () => this.props.share(text)
+					   },{
 						   title: 'Закрыть',
 						   autoclose: true,
 						   mode: 'cancel'

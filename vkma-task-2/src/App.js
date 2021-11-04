@@ -25,6 +25,48 @@ class App extends React.Component {
 		})
 	}
 
+	share = (text) => {
+		const background = "https://sun9-78.userapi.com/impg/scMK6xNyN8ebQOot5mDmto34_UORRDoLErTf7A/keEek25VREI.jpg?size=608x1136&quality=96&sign=6ebee5d3cbb3b71928056a718c1d7887&type=album"
+		console.log("https://vk.com/app7992945#"+window.btoa(text))
+		bridge.send("VKWebAppShowStoryBox", { "background_type" : "image", "url" : background, 'stickers': [
+				{
+					"sticker_type": "renderable",
+					"sticker": {
+						"can_delete": 0,
+						"content_type": "image",
+						"url": "https://host.adawhite.ru/static/qr_.png",
+						"clickable_zones": [
+							{
+								"action_type": "link",
+								"action": {
+									"link": "https://vk.com/app7992945#"+window.btoa(text),
+									"tooltip_text_key": "tooltip_open_default"
+								},
+								"clickable_area": [
+									{
+										"x": 0,
+										"y": 0
+									},
+									{
+										"x": 303,
+										"y": 0
+									},
+									{
+										"x": 303,
+										"y": 215
+									},
+									{
+										"x": 0,
+										"y": 215
+									}
+								]
+							}
+						]
+					}
+				}
+			]});
+	}
+
 	addScan = (text) => {
 		let results = this.state.scanned;
 		results.push(text);
@@ -50,8 +92,8 @@ class App extends React.Component {
 							</TabbarItem>
 						</Tabbar>
 					}>
-						<Scan id='scan' addScan={this.addScan}/>
-						<History id='history' scanned={this.state.scanned}/>
+						<History id='history' scanned={this.state.scanned} share={this.share}/>
+						<Scan id='scan' addScan={this.addScan} share={this.share}/>
 					</Epic>
 				</AppRoot>
 			</AdaptivityProvider>
