@@ -1,0 +1,61 @@
+.MemberCell {
+  margin: 12px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .vkuiFormLayout__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .Button:first-child {
+      color: var(--destructive);
+      margin: 0 12px;
+      padding: 4px 2px;
+
+      .vkuiButton__content {
+        padding: 0;
+      }
+    }
+
+    .FormItem {
+      padding-bottom: 0;
+      padding-top: 0;
+
+      &:nth-child(2) {
+        width: 100px;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.Editor-controls {
+  display: flex;
+  .Button:first-child {
+    margin-right: 16px;
+  }
+}
+
+.MatchResults {
+  margin-top: 24px;
+  width: 320px;
+  height: 60px;
+  box-shadow: 0 2px 24px 0 rgb(0 0 0 / 8%), 0 0 2px 0 rgb(0 0 0 / 8%);
+  border-radius: 8px;
+  padding: 12px;
+
+  .Team {
+    &:first-child {
+      color: #ffc505;
+      background-color: rgba(255,197,5,.08);
+    }
+
+    &:last-child {
+      color: #2787f5;
+      background-color: rgba(73,134,204,.08);
+    }
+  }
+}

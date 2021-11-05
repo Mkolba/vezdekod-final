@@ -1,0 +1,100 @@
+.TournamentGrid__Wrapper {
+  height: 500px;
+  width: 100%;
+  background: rgba(0,0,0,.1);
+  border-radius: 8px;
+  overflow: auto;
+
+  .Error {
+    height: 500px;
+    color: var(--destructive);
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .OlympicGrid {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .Row {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      width: 200px;
+      min-height: 500px;
+      margin-right: 32px;
+      margin-left: 16px;
+      position: relative;
+      flex-shrink: 0;
+
+      .Card {
+        box-shadow: 0 2px 24px 0 rgb(0 0 0 / 8%), 0 0 2px 0 rgb(0 0 0 / 8%);
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        overflow: hidden;
+        width: 180px;
+        height: 48px;
+
+        .Card__Content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 180px;
+          height: 48px;
+        }
+
+        .Card__Share {
+          color: var(--button_primary_background);
+          height: 100%;
+
+          .Tappable {
+            border-left: 1px var(--separator_common) solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        .Separator {
+          width: 100%;
+          .Separator__in {
+            margin: 0;
+          }
+        }
+
+        .Tappable {
+          text-align: center;
+          border-radius: 0;
+          height: 100%;
+          width: 100%;
+
+          &:is(.winner) {
+            background: rgba(0, 255, 0, .1);
+          }
+        }
+      }
+
+      .Arrow {
+        position: absolute;
+        background: black;
+        height: 1px;
+        width: 34px;
+      }
+
+      .Arrow-vertical {
+        position: absolute;
+        background: black;
+        width: 1px;
+        height: 110px;
+      }
+    }
+  }
+}
