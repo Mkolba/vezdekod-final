@@ -1,5 +1,7 @@
 [<img width="134" src="https://vk.com/images/apps/mini_apps/vk_mini_apps_logo.svg">](https://vk.com/services)
 
+❗ Изменяйте homepage в package.json на свой вариант при сборке ❗
+
 # Список доступных доменов для распознавания
 Можно изменить в `/src/tabs/Scan.js`  
 По умолчанию = ["vk.com"]
