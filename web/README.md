@@ -1,5 +1,8 @@
 [<img width="134" src="https://vk.com/images/apps/mini_apps/vk_mini_apps_logo.svg">](https://vk.com/services)
 
+❗ Бекенд: https://github.com/Mkolba/vezdekod-final/tree/main/web-api ❗  
+❗ Изменяйте homepage в package.json на свой вариант при сборке ❗
+
 # Create VK Mini App [![npm][npm]][npm-url] [![deps][deps]][deps-url]
 
 ## How to use
